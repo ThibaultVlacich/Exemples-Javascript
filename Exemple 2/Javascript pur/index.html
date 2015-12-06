@@ -12,6 +12,7 @@
      * @var color string  Code de la couleur désirée
      */
     function changeColor(color) {
+      // On change la valeur de la propriété color du style appliqué à #text
       document.getElementById('text').style.color = color;
     }
 
@@ -23,18 +24,21 @@
     function changeFormatting(type) {
       if (type == 'bold') {
         if (document.getElementById('text').style.fontWeight == 'bold') {
+          // Le texte est déjà en gras, on le remet normal
           document.getElementById('text').style.fontWeight = 'normal';
         } else {
           document.getElementById('text').style.fontWeight = 'bold';
         }
       } else if (type == 'italic') {
         if (document.getElementById('text').style.fontStyle == 'italic') {
+          // Le texte est déjà en italique, on le remet normal
           document.getElementById('text').style.fontStyle = 'normal';
         } else {
           document.getElementById('text').style.fontStyle = 'italic';
         }
       } else if (type == 'underline') {
         if (document.getElementById('text').style.textDecoration == 'underline') {
+          // Le texte est déjà souligné, on le remet normal
           document.getElementById('text').style.textDecoration = 'none';
         } else {
           document.getElementById('text').style.textDecoration = 'underline';
@@ -46,18 +50,18 @@
     Couleur du texte :
     <button onclick="changeColor('red');">Rouge</button>
     <button onclick="changeColor('green');">Vert</button>
-    <button onclick="changeColor('blue');">Blue</button>
+    <button onclick="changeColor('blue');">Bleu</button>
     <br><br>
     Mise en forme du texte :
-    <button type="button" onclick="changeFormatting('bold');"><strong>Gras</strong></button>
-    <button type="button" onclick="changeFormatting('italic');"><em>Italique</em></button>
-    <button type="button" onclick="changeFormatting('underline');"><u>Souligné</u></button>
+    <button onclick="changeFormatting('bold');"><strong>Gras</strong></button>
+    <button onclick="changeFormatting('italic');"><em>Italique</em></button>
+    <button onclick="changeFormatting('underline');"><u>Souligné</u></button>
     <br>
     <br>
     <br>
   </div>
   <div id="text">
-    Ici le texte dont on veut changer la couleur.
+    Ici le texte dont on veut changer le style.
   </div>
 </body>
 </html>
