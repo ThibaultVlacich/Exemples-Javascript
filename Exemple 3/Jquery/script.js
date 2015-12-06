@@ -16,28 +16,22 @@ $('input').on('change keyup', function() {
       $nickname = $('#nickname'),
       $email = $('#email'),
       $password = $('#password'),
-      $password_confirm = $('#password_confirm')
+      $password_confirm = $('#password_confirm'),
       $submit_button = $('#submit');
 
   if (
-    ($this.is($nickname) && $this.val().length > 3)
-    || ($this.is($email) && validateEmail($this.val()))
+    ($this.is($nickname) && $this.val().length > 3) ||
+    ($this.is($email) && validateEmail($this.val()))
   ) {
     $this.addClass('good');
     $this.removeClass('error');
   } else if ($this.is($password) || $this.is($password_confirm)) {
     if ($password.val() == $password_confirm.val()) {
-      $password.addClass('good');
-      $password_confirm.addClass('good');
-
-      $password.removeClass('error');
-      $password_confirm.removeClass('error');
+      $password.addClass('good').removeClass('error');
+      $password_confirm.addClass('good').removeClass('error');
     } else {
-      $password.removeClass('good');
-      $password_confirm.removeClass('good');
-
-      $password.addClass('error');
-      $password_confirm.addClass('error');
+      $password.addClass('error').removeClass('good');
+      $password_confirm.addClass('error').removeClass('good');
     }
   } else {
     $this.addClass('error');
@@ -45,9 +39,9 @@ $('input').on('change keyup', function() {
   }
 
   if (
-    $nickname.val().length > 3
-    && validateEmail($email.val())
-    && $password.val() == $password_confirm.val()
+    $nickname.val().length > 3 &&
+    validateEmail($email.val()) &&
+    $password.val() == $password_confirm.val()
   ) {
     $submit_button.prop('disabled', false);
   } else {
