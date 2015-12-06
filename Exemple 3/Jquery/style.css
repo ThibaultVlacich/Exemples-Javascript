@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+form span.required {
+  color: #CC0033;
+  font-size: bold;
+}
+
+form label {
+  width: 100%;
+  margin: 10px 0;
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  display: block;
+  min-height: 34px;
+  padding: 7px 8px;
+  font-size: 13px;
+  color: #333;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
+form input:disabled {
+  opacity: 0.5;
+}
+
+form input.error {
+  border-color: #CC0033;
+}
+
+form input.good {
+  border-color: #1fa67a;
+}
+
+form input.submit {
+  transition: all 0.3s ease;
+}
+
+form input.submit:hover {
+  color: white;
+  background-color: #CC0033;
+}
+
+form input.submit:disabled:hover {
+  color: #333;
+  background-color: #fff;
+}
