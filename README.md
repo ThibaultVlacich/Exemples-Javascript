@@ -1,3 +1,5 @@
+![Logo Event-You-All](https://raw.githubusercontent.com/ThibaultVlacich/Exemples-Javascript/master/logo.png "Logo Event-You-All")
+
 Ce repository contient le code source des différents exemples illustrants la présentation du langage JavaScript et du framework jQuery faite par le groupe G2A à l'[ISEP](http://www.isep.fr), Paris, France.
 
 Lien vers la présentation PowerPoint associée : [Non encore disponible]
