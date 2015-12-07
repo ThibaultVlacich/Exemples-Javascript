@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Exemple 4</title>
+
+</head>
+
+<body>
+
+  <div id="divPlayer">
+    <h1>Exemple 4 : lecteur de musique</h1>
+
+    <audio id="audioPlayer" ontimeupdate="update(this)">
+      <source src="NoCopyrightSounds - Tobu - Infectous.mp3">
+    </audio>
+
+    <div>
+      <div id="progressBarControl" onclick="clickProgress('audioPlayer', this, event)" style="background-color:red; width: 300px;">
+        <div id="progressBar" style="background-color:blue; color: white;"></div>
+      </div>
+      <span id="progressTime">0:00</span>
+    </div>
+
+    <button class="control" onclick="play('audioPlayer', this)">Play</button>
+    <button class="control" onclick="resume('audioPlayer')">Stop</button>
+
+    <span class="volume">
+      <button class="stick1" onclick="volume('audioPlayer', 0)" style="height:1%"></button>
+      <button class="stick2" onclick="volume('audioPlayer', 0.3)" style="height:3%"></button>
+      <button class="stick3" onclick="volume('audioPlayer', 0.5)" style="height:5%"></button>
+      <button class="stick4" onclick="volume('audioPlayer', 0.7)" style="height:7%"></button>
+      <button class="stick5" onclick="volume('audioPlayer', 1)" style="height:9%"></button>
+    </span>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
