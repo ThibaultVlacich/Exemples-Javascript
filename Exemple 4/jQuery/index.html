@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Exemple 4</title>
+
+</head>
+
+<body>
+
+  <div>
+    <h1>Exemple 4 : lecteur de musique</h1>
+
+    <audio data-player>
+      <source src="../JavaScript uniquement/NoCopyrightSounds - Tobu - Infectous.mp3">
+    </audio>
+
+    <div>
+      <div data-progressbar style="background-color:red; width: 300px;">
+        <div style="background-color:blue; color: white;"></div>
+      </div>
+      <span data-progressTime>0:00</span>
+    </div>
+
+    <button data-play>Play</button>
+    <button data-stop>Stop</button>
+
+    <span>
+      <button data-volume="0.0" style="height:1%"></button>
+      <button data-volume="0.3" style="height:3%"></button>
+      <button data-volume="0.5" style="height:5%"></button>
+      <button data-volume="0.7" style="height:7%"></button>
+      <button data-volume="1.0" style="height:9%"></button>
+    </span>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
