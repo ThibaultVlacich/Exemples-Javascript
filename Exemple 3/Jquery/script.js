@@ -23,8 +23,7 @@ $('input').on('change keyup', function() {
     ($this.is($nickname) && $this.val().length > 3) ||
     ($this.is($email) && validateEmail($this.val()))
   ) {
-    $this.addClass('good');
-    $this.removeClass('error');
+    $this.addClass('good').removeClass('error');
   } else if ($this.is($password) || $this.is($password_confirm)) {
     if ($password.val() == $password_confirm.val()) {
       $password.addClass('good').removeClass('error');
@@ -34,8 +33,7 @@ $('input').on('change keyup', function() {
       $password_confirm.addClass('error').removeClass('good');
     }
   } else {
-    $this.addClass('error');
-    $this.removeClass('good');
+    $this.addClass('error').removeClass('good');
   }
 
   if (
