@@ -86,7 +86,7 @@ function getPosition(element) {
   do {
     top += element.offsetTop;
     left += element.offsetLeft;
-  } while (element = element.offsetParent);
+  } while ((element = element.offsetParent) !== null);
 
   return {
     x: left,
