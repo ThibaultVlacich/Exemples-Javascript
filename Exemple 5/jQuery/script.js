@@ -11,7 +11,7 @@ $('button').click(function() {
       'type': 'video',
       'maxResults': 5
     },
-    function(data) { // On récupère les données obtenues pas la requête AJAX
+    function(data) { // On récupère les données obtenues par la requête AJAX
       // On vide l'ul #results
       $('#results').empty();
 
