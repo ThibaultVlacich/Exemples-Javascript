@@ -20,7 +20,7 @@ function resume(idPlayer) {
 function volume(idPlayer, vol) {
   var player = document.querySelector('#' + idPlayer);
 
-  player.volume = vol;
+  player.volume = vol;   //fonction predefini
 }
 
 function update(player) {
@@ -31,9 +31,9 @@ function update(player) {
 
   var progress = document.querySelector('#progressBar');
 
-  progress.style.width = percent + '%';
-  progress.textContent = percent + '%';
-  document.querySelector('#progressTime').textContent = formatTime(time);
+  progress.style.width = percent + '%';   //barre evolue en fonction du temps
+  progress.textContent = percent + '%';   //le contenu evolue en fct du tps
+  document.querySelector('#progressTime').textContent = formatTime(time); //affichage correct utilisation formatTime
 }
 
 function formatTime(time) {
@@ -56,29 +56,30 @@ function formatTime(time) {
   }
 }
 
+//on clique!
 function clickProgress(idPlayer, control, event) {
-  var parent = getPosition(control); // La position absolue de la progressBar
+  var parent = getPosition(control); // La position absolue de la progressBar (grosse barre)
   var target = getMousePosition(event); // L'endroit du la progressBar où on a cliqué
   var player = document.querySelector('#' + idPlayer);
 
-  var x = target.x - parent.x;
+  var x = target.x - parent.x; //comparaison
   var y = target.y - parent.y;
 
-  var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth;
+  var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth; //recupere la taille
 
-  var percent = Math.ceil((x / wrapperWidth) * 100);
-  var duration = player.duration;
+  var percent = Math.ceil((x / wrapperWidth) * 100);  //changer affichage
+  var duration = player.duration; //utilisé dans la suite
 
-  player.currentTime = (duration * percent) / 100;
+  player.currentTime = (duration * percent) / 100;  //on deplace le son
 }
-
+//position souris
 function getMousePosition(event) {
   return {
     x: event.pageX,
     y: event.pageY
   };
 }
-
+//position element
 function getPosition(element) {
   var top = 0,
     left = 0;
@@ -86,7 +87,7 @@ function getPosition(element) {
   do {
     top += element.offsetTop;
     left += element.offsetLeft;
-  } while (element = element.offsetParent);
+  } while (element = element.offsetParent); //tant que il y a l'element
 
   return {
     x: left,
